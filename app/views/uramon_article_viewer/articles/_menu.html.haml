@@ -1,8 +1,0 @@
-%ul.menu
-  %li.menu__item.menu__item--home.menu__section{data: {menu_item_state: 'current'}}
-    = link_to 'Home', root_path, class: 'menu__label'
-
-    %ul.menu__items
-      - @categories.each do |category|
-        %li.menu__item{class: "menu__item--#{category["slug"]}"}
-          = link_to category["name"], category_path(category["id"]), class: 'menu__label'
