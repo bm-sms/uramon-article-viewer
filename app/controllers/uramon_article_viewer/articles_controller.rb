@@ -5,6 +5,8 @@ module UramonArticleViewer
     def index
       response = @connection.get("/admin/articles.json")
       @articles = JSON.parse(response.body)
+      response = @connection.get("/admin/categories.json")
+      @categories = JSON.parse(response.body)
     end
 
     def show
