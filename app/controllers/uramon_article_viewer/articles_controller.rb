@@ -8,12 +8,13 @@ module UramonArticleViewer
     before_filter :setup_connection
 
     def index
-      response = @connection.get("/articles.json")
+      response = @connection.get("/admin/articles.json")
+      p response.body
       @articles = JSON.parse(response.body)
     end
 
     def show
-      response = @connection.get("/articles/1.json")
+      response = @connection.get("/admin/articles/1.json")
       @article = JSON.parse(response.body)
     end
 
