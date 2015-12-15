@@ -1,7 +1,7 @@
 require "faraday"
 
 module UramonArticleViewer
-  class ApplicationController < ActionController::Base
+  class ApplicationController < ::ApplicationController
     BASE_URI = "http://localhost:3000/"
 
     before_filter :setup_connection
