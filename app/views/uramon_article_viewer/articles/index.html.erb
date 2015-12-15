@@ -1,0 +1,4 @@
+<h1>Articles#index</h1>
+<%- @articles.each do |article| %>
+  <p><%= article["title"] %>: <%= article["body"] %></p>
+<%- end %>
