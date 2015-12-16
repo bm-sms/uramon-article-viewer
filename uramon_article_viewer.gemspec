@@ -18,6 +18,9 @@ Gem::Specification.new do |s|
   s.test_files = Dir["test/**/*"]
 
   s.add_dependency "rails", "~> 4.2.5"
+
+  s.add_dependency "cells"
+  s.add_dependency "cells-haml"
   s.add_dependency "faraday", "~> 0.9.2"
   s.add_dependency "haml-rails"
 
