@@ -5,5 +5,9 @@ module UramonArticleViewer
         '/categories'
       end
     end
+
+    def articles
+      Article.all(category_slug: slug)
+    end
   end
 end

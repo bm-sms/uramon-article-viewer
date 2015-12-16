@@ -1,8 +1,14 @@
 module UramonArticleViewer
   class UramonResource < OpenStruct
     class << self
-      def all
-        response = request_as_json(resources_path)
+      def all(query = nil)
+        response = request_as_json(resources_path) do |req|
+          if query
+            query.each do |key, value|
+              req.params[key] = value
+            end
+          end
+        end
 
         parse_as_model(response.body)
       end
@@ -56,8 +62,8 @@ module UramonArticleViewer
         end
       end
 
-      def request_as_json(path)
-        connection.get(site_base_path + path)
+      def request_as_json(path, &block)
+        connection.get(site_base_path + path, &block)
       end
 
       def site_base_path
