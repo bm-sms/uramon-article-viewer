@@ -67,7 +67,7 @@ module UramonArticleViewer
       end
 
       def site_base_path
-        "/api/sites/#{UramonArticleViewer.article_service_fqdn}"
+        "/api/sites/#{UramonArticleViewer.article_service_id}"
       end
     end
   end
