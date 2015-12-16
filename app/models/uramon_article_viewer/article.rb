@@ -5,5 +5,9 @@ module UramonArticleViewer
         '/articles'
       end
     end
+
+    def category_name
+      self['category']['name']
+    end
   end
 end
