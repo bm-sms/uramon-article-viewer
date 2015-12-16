@@ -1,5 +1,5 @@
 module UramonArticleViewer
-  class UramonResource
+  class UramonResource < OpenStruct
     class << self
       def all
         response = request_as_json(resources_path)
@@ -46,9 +46,14 @@ module UramonArticleViewer
         [resources_path, id].join('/')
       end
 
-      # TODO Return model instance instead of just Hash
       def parse_as_model(json)
-        JSON.parse(json)
+        data = JSON.parse(json)
+
+        if data.is_a?(Array)
+          data.map {|attrs| new(attrs) }
+        else
+          new(data)
+        end
       end
 
       def request_as_json(path)
