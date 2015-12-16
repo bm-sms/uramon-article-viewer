@@ -52,7 +52,11 @@ module UramonArticleViewer
       end
 
       def request_as_json(path)
-        connection.get(path + '.json')
+        connection.get(site_base_path + path)
+      end
+
+      def site_base_path
+        "/api/sites/#{UramonArticleViewer.article_service_fqdn}"
       end
     end
   end

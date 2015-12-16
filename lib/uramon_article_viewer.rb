@@ -13,10 +13,12 @@ module UramonArticleViewer
   end
 
   cattr_accessor :article_service_host
+  cattr_accessor :article_service_fqdn
   cattr_accessor :parent_controller
 
   configure do |config|
     config.article_service_host = 'http://localhost:3000'
+    config.article_service_fqdn = 'localhost'
     config.parent_controller = 'ApplicationController'
   end
 end
