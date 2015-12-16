@@ -14,9 +14,11 @@ module UramonArticleViewer
 
   cattr_accessor :article_service_host
   cattr_accessor :parent_controller
+  cattr_accessor :helpers
 
   configure do |config|
     config.article_service_host = 'http://localhost:3000'
     config.parent_controller = 'ApplicationController'
+    config.helpers = []
   end
 end
