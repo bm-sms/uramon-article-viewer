@@ -1,7 +1,5 @@
 module UramonArticleViewer
   class UramonResource
-    BASE_URI = "http://localhost:3000/"
-
     class << self
       def all
         response = request_as_json(resources_path)
@@ -18,7 +16,7 @@ module UramonArticleViewer
       private
 
       def connection
-        @connection ||= Faraday::Connection.new(:url => BASE_URI) do |builder|
+        @connection ||= Faraday::Connection.new(url: UramonArticleViewer.article_service_host) do |builder|
           builder.use Faraday::Request::UrlEncoded
           builder.use Faraday::Response::Logger
           builder.use Faraday::Adapter::NetHttp
