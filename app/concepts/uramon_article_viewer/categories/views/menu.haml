@@ -1,0 +1,4 @@
+- @categories.each do |category|
+  %li.menu__item{class: "menu__item--#{category["slug"]}"}
+    -# TODO Use named route
+    = link_to category["name"], "/press/category/#{(category["id"])}", class: 'menu__label'
