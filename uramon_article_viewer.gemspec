@@ -22,6 +22,7 @@ Gem::Specification.new do |s|
   s.add_dependency "cells"
   s.add_dependency "cells-haml"
   s.add_dependency "faraday", "~> 0.9.2"
+  s.add_dependency "faraday-digestauth"
   s.add_dependency "haml-rails"
 
   s.add_development_dependency "sqlite3"

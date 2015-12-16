@@ -5,6 +5,7 @@ PATH
       cells
       cells-haml
       faraday (~> 0.9.2)
+      faraday-digestauth
       haml-rails
       rails (~> 4.2.5)
 
@@ -58,6 +59,9 @@ GEM
     erubis (2.7.0)
     faraday (0.9.2)
       multipart-post (>= 1.2, < 3)
+    faraday-digestauth (0.2.1)
+      faraday (~> 0.7)
+      net-http-digest_auth (~> 1.4)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
     haml (4.1.0.beta.1)
@@ -84,6 +88,7 @@ GEM
     mini_portile2 (2.0.0)
     minitest (5.8.3)
     multipart-post (2.0.0)
+    net-http-digest_auth (1.4)
     nokogiri (1.6.7)
       mini_portile2 (~> 2.0.0.rc2)
     rack (1.6.4)
