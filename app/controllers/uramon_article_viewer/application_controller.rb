@@ -4,8 +4,8 @@ module UramonArticleViewer
   class ApplicationController < ::ApplicationController
     BASE_URI = "http://localhost:3000/"
 
-    before_filter :setup_connection
-    before_filter :setup_categories
+    before_action :setup_connection
+    before_action :setup_categories
 
     private
 
