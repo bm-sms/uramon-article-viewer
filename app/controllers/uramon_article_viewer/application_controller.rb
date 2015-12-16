@@ -1,4 +1,4 @@
 module UramonArticleViewer
-  class ApplicationController < ::ApplicationController
+  class ApplicationController < UramonArticleViewer.parent_controller.constantize
   end
 end
