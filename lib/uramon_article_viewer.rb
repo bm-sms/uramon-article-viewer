@@ -1,5 +1,6 @@
 require "haml-rails"
 require "faraday"
+require "faraday/digestauth"
 require "cells"
 require "cells-haml"
 require "uramon_article_viewer/engine"
