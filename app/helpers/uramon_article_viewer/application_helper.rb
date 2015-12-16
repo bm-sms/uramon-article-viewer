@@ -1,3 +1,5 @@
+require "redcarpet"
+
 module UramonArticleViewer
   module ApplicationHelper
     def render_markdown(markdown_text)
