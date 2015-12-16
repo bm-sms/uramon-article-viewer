@@ -1,5 +1,3 @@
-require "faraday"
-
 module UramonArticleViewer
   class ApplicationController < ::ApplicationController
     BASE_URI = "http://localhost:3000/"
