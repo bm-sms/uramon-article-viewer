@@ -1,3 +1,5 @@
+<%= render partial: 'breadcrumbs', locals: {breadcrumbs: [['ホーム', '/'], ['仕事', '/work'], [@article['title']]]} %>
+
 <article>
   <%#= TODO: render Markdown %>
   <%= @article["body"] %>

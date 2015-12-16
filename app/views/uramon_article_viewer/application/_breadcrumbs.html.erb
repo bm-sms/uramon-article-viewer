@@ -1,0 +1,13 @@
+<nav class="breadcrumbs">
+  <ol class="breadcrumbs__list">
+    <% breadcrumbs.each do |title, url| %>
+      <li class="breadcrumbs__fragment" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+        <% span = capture do %>
+          <span itemprop="title"><%= title %></span>
+        <% end %>
+
+        <%= link_to_if url.present?, span, url, class: "breadcrumbs__link", itemprop: "url" %>
+      </li>
+    <% end %>
+  </ol>
+</nav>
