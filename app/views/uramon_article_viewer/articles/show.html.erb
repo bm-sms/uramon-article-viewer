@@ -1,4 +1,4 @@
-<%= render partial: 'breadcrumbs', locals: {breadcrumbs: [['ホーム', '/'], [@article.category_name, '/work'], [@article.title]]} %>
+<%= render partial: 'breadcrumbs', locals: {breadcrumbs: [['ホーム', '/'], [@article.category_name, category_path(@article.category_slug)], [@article.title]]} %>
 
 <article>
   <%= raw render_markdown(@article.body) %>

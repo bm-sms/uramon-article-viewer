@@ -9,5 +9,9 @@ module UramonArticleViewer
     def category_name
       self['category']['name']
     end
+
+    def category_slug
+      self['category']['slug']
+    end
   end
 end
