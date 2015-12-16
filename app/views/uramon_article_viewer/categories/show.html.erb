@@ -1,0 +1,11 @@
+<%= render partial: 'breadcrumbs', locals: {breadcrumbs: [['ホーム', '/'], ['仕事']]} %>
+
+<h1>Categories#index</h1>
+
+<ul>
+  <% @articles.each do |article| %>
+    <li>
+      <%= link_to article["title"], article_path(id: article["id"]) %>
+    </li>
+  <% end %>
+</ul>
